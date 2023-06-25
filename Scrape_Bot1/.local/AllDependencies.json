@@ -21265,9 +21265,9 @@
     "restore": {
       "projectUniqueName": "Scrape_Bot1",
       "projectName": "Scrape_Bot1",
-      "projectPath": "C:\\Users\\bishw\\OneDrive\\Documents\\UiPath\\Scrape_Bot1\\.local",
+      "projectPath": "D:\\RPA\\RPA_WebScraping\\Scrape_Bot1\\.local",
       "packagesPath": "C:\\Users\\bishw\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\bishw\\OneDrive\\Documents\\UiPath\\Scrape_Bot1\\.local"
+      "outputPath": "D:\\RPA\\RPA_WebScraping\\Scrape_Bot1\\.local"
     },
     "frameworks": {
       "net6.0-windows7.0": {

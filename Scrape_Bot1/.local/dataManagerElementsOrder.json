@@ -11,7 +11,49 @@
     {
       "Path": "Main.xaml",
       "SortBy": 0,
-      "VariablesSectionElementsOrder": [],
+      "VariablesSectionElementsOrder": [
+        "Date_Time&Sequence_1",
+        "DT_Config&Sequence_1",
+        "Config&Sequence_1",
+        "Dt_master&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "LG_Oven_DataScraping.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "OvenName_LG&Sequence_11",
+        "OvenURL_LG&Sequence_11",
+        "OfferPrice_LG&Sequence_11",
+        "ModelNumber_LG&Sequence_11",
+        "MRP_LG&Sequence_11",
+        "Dt_Ovens&Sequence_6",
+        "browser&Sequence_6",
+        "Dt_Report&Sequence_6",
+        "MRP_LG&Sequence_7",
+        "ModelNumber_LG&Sequence_7",
+        "OfferPrice_LG&Sequence_7",
+        "OvenURL_LG&Sequence_7",
+        "OvenName_LG&Sequence_7"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "In_OvenType",
+        "In_ReportPath",
+        "In_URL",
+        "Config"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "test.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "ExtractDataTable&Sequence_4"
+      ],
       "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
