@@ -25,6 +25,11 @@
       "Path": "LG_Oven_DataScraping.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "OvenName_LG&Sequence_20",
+        "OvenURL_LG&Sequence_20",
+        "OfferPrice_LG&Sequence_20",
+        "ModelNumber_LG&Sequence_20",
+        "MRP_LG&Sequence_20",
         "OvenName_LG&Sequence_11",
         "OvenURL_LG&Sequence_11",
         "OfferPrice_LG&Sequence_11",
@@ -40,6 +45,7 @@
         "OvenName_LG&Sequence_7"
       ],
       "ArgumentsSectionElementsOrder": [
+        "In_ReportSheetName",
         "In_OvenType",
         "In_ReportPath",
         "In_URL",
@@ -51,9 +57,7 @@
     {
       "Path": "test.xaml",
       "SortBy": 0,
-      "VariablesSectionElementsOrder": [
-        "ExtractDataTable&Sequence_4"
-      ],
+      "VariablesSectionElementsOrder": [],
       "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
