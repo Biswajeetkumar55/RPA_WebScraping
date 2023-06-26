@@ -57,8 +57,33 @@
     {
       "Path": "test.xaml",
       "SortBy": 0,
-      "VariablesSectionElementsOrder": [],
+      "VariablesSectionElementsOrder": [
+        "ExtractDataTable&Sequence_2"
+      ],
       "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "SamsungDataScraping.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "Dt_Report&Sequence_1",
+        "browser&Sequence_1",
+        "Dt_Ovens&Sequence_1",
+        "OvenName_LG&Sequence_3",
+        "OvenURL_LG&Sequence_3",
+        "OfferPrice_LG&Sequence_3",
+        "ModelNumber_LG&Sequence_3",
+        "MRP_LG&Sequence_3"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "In_ReportSheetName",
+        "In_OvenType",
+        "In_ReportPath",
+        "In_URL",
+        "Config"
+      ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
     }
