@@ -12,6 +12,7 @@
       "Path": "Main.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "SheetName&Sequence_1",
         "Date_Time&Sequence_1",
         "DT_Config&Sequence_1",
         "Config&Sequence_1",
@@ -58,6 +59,7 @@
       "Path": "test.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "ExtractDataTable&Sequence_6",
         "ExtractDataTable&Sequence_2"
       ],
       "ArgumentsSectionElementsOrder": [],
@@ -83,6 +85,64 @@
         "In_ReportPath",
         "In_URL",
         "Config"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Bot_1.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "Dt_master",
+        "Config",
+        "Date_Time"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Frameworks/LGScraping.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "OvenCapacityLG&Sequence_2",
+        "ColorLG&Sequence_2",
+        "ProductDimensionLG&Sequence_2",
+        "PowerOutputLG&Sequence_2",
+        "CavityMaterialLG&Sequence_2",
+        "Raiting&Sequence_2",
+        "DefrostLG&Sequence_2",
+        "ChildLockLG&Sequence_2",
+        "TypeLG&Sequence_2",
+        "DT_LG&Sequence_2",
+        "RowIndex&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Bot_4.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "Dt_InputBot4&Sequence_13",
+        "bot4Browser&Sequence_15",
+        "OvenCapacityLG&Sequence_17",
+        "ColorLG&Sequence_17",
+        "ProductDimensionLG&Sequence_17",
+        "PowerOutputLG&Sequence_17",
+        "CavityMaterialLG&Sequence_17",
+        "Raiting&Sequence_17",
+        "DefrostLG&Sequence_17",
+        "ChildLockLG&Sequence_17",
+        "TypeLG&Sequence_17",
+        "RowIndex&Sequence_17",
+        "WarmLG&Sequence_17"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "Config",
+        "Date_Time",
+        "SheetName"
       ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
