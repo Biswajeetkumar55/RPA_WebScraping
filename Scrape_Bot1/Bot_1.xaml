@@ -1,9 +1,10 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Bot_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System.ComponentModel.TypeConverter" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Bot_1" this:Bot_1.Date_Time="30-06-2023 12-35-54" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System.ComponentModel.TypeConverter" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="Dt_master" Type="InArgument(sd:DataTable)" />
     <x:Property Name="Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
     <x:Property Name="Date_Time" Type="InArgument(x:String)" />
   </x:Members>
+  <sap:VirtualizedContainerService.HintSize>1410.4,2920</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -33,6 +34,8 @@
       <x:String>UiPath.Core</x:String>
       <x:String>GlobalVariablesNamespace</x:String>
       <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -104,20 +107,24 @@
       <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:WorkflowViewState.IdRef="Sequence_13">
+  <Sequence sap:VirtualizedContainerService.HintSize="720.8,2855.2" sap2010:WorkflowViewState.IdRef="Sequence_13">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="Bot 1" sap:VirtualizedContainerService.HintSize="449.6,83.2" sap2010:WorkflowViewState.IdRef="Sequence_12">
+    <Sequence DisplayName="Bot 1" sap:VirtualizedContainerService.HintSize="658.4,2743.2" sap2010:WorkflowViewState.IdRef="Sequence_12">
+      <Sequence.Variables>
+        <Variable x:TypeArguments="sd:DataTable" Name="Dt_bot1" />
+        <Variable x:TypeArguments="sd:DataTable" Name="Dt_main" />
+      </Sequence.Variables>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Itrating through each row of category in manufacturer sheet" DataTable="[Dt_master]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="596,1032.8" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Itrating through each row of category in manufacturer sheet" DataTable="[Dt_master]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="596,1032.8" sap2010:WorkflowViewState.IdRef="ForEachRow_4">
         <ui:ForEachRow.Body>
           <ActivityAction x:TypeArguments="sd:DataRow">
             <ActivityAction.Argument>
@@ -144,7 +151,7 @@
                             <ui:InvokeWorkflowFile.Arguments>
                               <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="Config">[Config]</InArgument>
                               <InArgument x:TypeArguments="x:String" x:Key="In_URL">[row("URL").ToString]</InArgument>
-                              <InArgument x:TypeArguments="x:String" x:Key="In_ReportPath">[Config("ReportPath").ToString+" Ovens "+Date_Time+".xlsx"]</InArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="In_ReportPath">[Config("ReportPath_Bot1").ToString+" Ovens "+Date_Time+".xlsx"]</InArgument>
                               <InArgument x:TypeArguments="x:String" x:Key="In_OvenType">[row("Type").ToString]</InArgument>
                               <InArgument x:TypeArguments="x:String" x:Key="In_ReportSheetName">[row("Category").ToString]</InArgument>
                             </ui:InvokeWorkflowFile.Arguments>
@@ -164,7 +171,7 @@
                             <ui:InvokeWorkflowFile.Arguments>
                               <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="Config">[Config]</InArgument>
                               <InArgument x:TypeArguments="x:String" x:Key="In_URL">[row("URL").ToString]</InArgument>
-                              <InArgument x:TypeArguments="x:String" x:Key="In_ReportPath">[Config("ReportPath").ToString+" Ovens "+Date_Time+".xlsx"]</InArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="In_ReportPath">[Config("ReportPath_Bot1").ToString+" Ovens "+Date_Time+".xlsx"]</InArgument>
                               <InArgument x:TypeArguments="x:String" x:Key="In_OvenType">[row("Type").ToString]</InArgument>
                               <InArgument x:TypeArguments="x:String" x:Key="In_ReportSheetName">[row("Category").ToString]</InArgument>
                             </ui:InvokeWorkflowFile.Arguments>
@@ -174,6 +181,12 @@
                     </ui:IfElseIfBlock>
                   </sc:BindingList>
                 </ui:IfElseIf.ConditionBlocks>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
               </ui:IfElseIf>
             </Sequence>
           </ActivityAction>
@@ -186,6 +199,89 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:ForEachRow>
+      <If sap2010:Annotation.AnnotationText="If the main file does not exist then copy from latest bot 1 report" Condition="[File.Exists(Config(&quot;ReportPath_main&quot;).ToString) = true]" sap:VirtualizedContainerService.HintSize="596,112.8" sap2010:WorkflowViewState.IdRef="If_2">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <If.Then>
+          <Sequence sap:VirtualizedContainerService.HintSize="300,82.4" sap2010:WorkflowViewState.IdRef="Sequence_17">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </Sequence>
+        </If.Then>
+        <If.Else>
+          <Sequence sap:VirtualizedContainerService.HintSize="376.8,244.8" sap2010:WorkflowViewState.IdRef="Sequence_18">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:CopyFile ContinueOnError="{x:Null}" Destination="[Config(&quot;ReportPath_main&quot;).ToString]" DisplayName="Copy File" sap:VirtualizedContainerService.HintSize="333.6,155.2" sap2010:WorkflowViewState.IdRef="CopyFile_1" Path="[Config(&quot;ReportPath_Bot1&quot;).ToString+&quot; Ovens &quot;+Date_Time+&quot;.xlsx&quot;]" />
+          </Sequence>
+        </If.Else>
+      </If>
+      <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[Dt_bot1]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="596,88" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Ovens" WorkbookPath="[Config(&quot;ReportPath_Bot1&quot;).ToString+&quot; Ovens &quot;+Date_Time+&quot;.xlsx&quot;]" />
+      <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[Dt_main]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="596,88" sap2010:WorkflowViewState.IdRef="ReadRange_2" SheetName="Ovens" WorkbookPath="[Config(&quot;ReportPath_main&quot;).ToString]" />
+      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="comparing and adding row values to main from recent run" DataTable="[Dt_bot1]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="596,993.6" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
+        <ui:ForEachRow.Body>
+          <ActivityAction x:TypeArguments="sd:DataRow">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="sd:DataRow" Name="Row" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="473.6,845.6" sap2010:WorkflowViewState.IdRef="Sequence_16">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <If sap2010:Annotation.AnnotationText="Check if the model number already exist in the main report,&#xA;&#xA;If already exist then don't add else append row to main Datatable" Condition="[Dt_main.AsEnumerable.Any(Function(x) x(&quot;Model&quot;).ToString = Row(&quot;Model&quot;).ToString) = true]" sap:VirtualizedContainerService.HintSize="411.2,733.6" sap2010:WorkflowViewState.IdRef="If_1">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <If.Then>
+                  <Sequence sap:VirtualizedContainerService.HintSize="300,82.4" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </Sequence>
+                </If.Then>
+                <If.Else>
+                  <Sequence sap:VirtualizedContainerService.HintSize="377.6,408" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="334.4,90.4" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[Row(&quot;Model&quot;).ToString+&quot; added to main&quot;]" />
+                    <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{row(&quot;Brand&quot;).ToString,row(&quot;Model&quot;).ToString,row(&quot;Name&quot;).ToString,row(&quot;URL&quot;).ToString,row(&quot;Offer Price&quot;).ToString,row(&quot;MRP&quot;).ToString}]" DataTable="[Dt_main]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="334.4,188" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
+                  </Sequence>
+                </If.Else>
+              </If>
+            </Sequence>
+          </ActivityAction>
+        </ui:ForEachRow.Body>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:ForEachRow>
+      <ui:WriteRange AddHeaders="False" DataTable="[Dt_main]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="596,116" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Ovens" StartingCell="A2" WorkbookPath="[Config(&quot;ReportPath_main&quot;).ToString]" />
     </Sequence>
   </Sequence>
 </Activity>

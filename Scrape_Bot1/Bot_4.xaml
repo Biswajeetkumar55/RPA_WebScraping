@@ -4,7 +4,7 @@
     <x:Property Name="Date_Time" Type="InArgument(x:String)" />
     <x:Property Name="SheetName" Type="InArgument(x:String)" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>1410.4,3722.4</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1410.4,5515.2</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -109,13 +109,13 @@
       <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="959.2,3657.6" sap2010:WorkflowViewState.IdRef="Sequence_19">
+  <Sequence sap:VirtualizedContainerService.HintSize="959.2,5450.4" sap2010:WorkflowViewState.IdRef="Sequence_19">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="Bot_4" sap:VirtualizedContainerService.HintSize="896.8,3545.6" sap2010:WorkflowViewState.IdRef="Sequence_13">
+    <Sequence DisplayName="Bot_4" sap:VirtualizedContainerService.HintSize="896.8,5338.4" sap2010:WorkflowViewState.IdRef="Sequence_13">
       <Sequence.Variables>
         <Variable x:TypeArguments="sd:DataTable" Name="Dt_InputBot4" />
         <Variable x:TypeArguments="x:Int32" Name="RowIndex" />
@@ -126,14 +126,14 @@
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[Dt_InputBot4]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="834.4,88" sap2010:WorkflowViewState.IdRef="ReadRange_4" SheetName="[SheetName]" WorkbookPath="[Config(&quot;ReportPath&quot;).ToString+&quot; Ovens &quot;+Date_Time+&quot;.xlsx&quot;]" />
-      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[Dt_InputBot4]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="834.4,3305.6" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
+      <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[Dt_InputBot4]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="834.4,88" sap2010:WorkflowViewState.IdRef="ReadRange_4" SheetName="[SheetName]" WorkbookPath="[Config(&quot;ReportPath_main&quot;).ToString]" />
+      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[Dt_InputBot4]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="834.4,5098.4" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
         <ui:ForEachRow.Body>
           <ActivityAction x:TypeArguments="sd:DataRow">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="sd:DataRow" Name="Row" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="800.8,3188.8" sap2010:WorkflowViewState.IdRef="Sequence_15">
+            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="800.8,4981.6" sap2010:WorkflowViewState.IdRef="Sequence_15">
               <Sequence.Variables>
                 <Variable x:TypeArguments="ui:Browser" Name="bot4Browser" />
               </Sequence.Variables>
@@ -150,24 +150,24 @@
                   <InArgument x:TypeArguments="x:Int32">[Dt_InputBot4.Rows.IndexOf(Row)]</InArgument>
                 </Assign.Value>
               </Assign>
-              <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="738.4,2955.2" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" UiBrowser="[bot4Browser]" Url="[Row(&quot;URL&quot;).ToString]">
+              <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="738.4,4748" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" UiBrowser="[bot4Browser]" Url="[Row(&quot;URL&quot;).ToString]">
                 <ui:OpenBrowser.Body>
                   <ActivityAction x:TypeArguments="x:Object">
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                     </ActivityAction.Argument>
-                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="704.8,2852.8" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="704.8,4645.6" sap2010:WorkflowViewState.IdRef="Sequence_16">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:IfElseIf DisplayName="Else If" sap:VirtualizedContainerService.HintSize="642.4,2740.8" sap2010:WorkflowViewState.IdRef="IfElseIf_1">
+                      <ui:IfElseIf DisplayName="Else If" sap:VirtualizedContainerService.HintSize="642.4,4533.6" sap2010:WorkflowViewState.IdRef="IfElseIf_1">
                         <ui:IfElseIf.ConditionBlocks>
                           <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
                             <ui:IfElseIfBlock BlockType="If" Condition="[Row(&quot;Brand&quot;).ToString.Contains(&quot;LG&quot;)]">
                               <ui:IfElseIfBlock.Then>
-                                <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser | LG" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="0c4f1e2754d02019de9b74957701293c" Selector="&lt;html app='chrome.exe' title='*LG*' /&gt;">
+                                <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser | LG" sap:VirtualizedContainerService.HintSize="483.2,1885.6" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="0c4f1e2754d02019de9b74957701293c" Selector="&lt;html app='chrome.exe' title='*LG*' /&gt;">
                                   <ui:BrowserScope.Body>
                                     <ActivityAction x:TypeArguments="x:Object">
                                       <ActivityAction.Argument>
@@ -237,9 +237,7 @@
                                                       <OutArgument x:TypeArguments="x:String">[Raiting]</OutArgument>
                                                     </Assign.To>
                                                     <Assign.Value>
-                                                      <InArgument x:TypeArguments="x:String">
-                                                        <Literal x:TypeArguments="x:String" Value="" />
-                                                      </InArgument>
+                                                      <InArgument x:TypeArguments="x:String">[Nothing]</InArgument>
                                                     </Assign.Value>
                                                   </Assign>
                                                 </Sequence>
@@ -779,14 +777,14 @@
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
                                         </ui:MultipleAssign>
-                                        <ui:WriteRange AddHeaders="False" DataTable="[Dt_InputBot4]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="387.2,116" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="[SheetName]" StartingCell="A2" WorkbookPath="[Config(&quot;ReportPath&quot;).ToString+&quot; Ovens &quot;+Date_Time+&quot;.xlsx&quot;]" />
+                                        <ui:WriteRange AddHeaders="False" DataTable="[Dt_InputBot4]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="387.2,116" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="[SheetName]" StartingCell="A2" WorkbookPath="[Config(&quot;ReportPath_main&quot;).ToString]" />
                                         <ui:CloseTab Browser="[bot4Browser]" DisplayName="Close Tab" sap:VirtualizedContainerService.HintSize="387.2,24.8" sap2010:WorkflowViewState.IdRef="CloseTab_1" />
                                       </Sequence>
                                     </ActivityAction>
                                   </ui:BrowserScope.Body>
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
@@ -795,14 +793,14 @@
                             </ui:IfElseIfBlock>
                             <ui:IfElseIfBlock BlockType="ElseIf" Condition="[Row(&quot;Brand&quot;).ToString.Contains(&quot;Samsung&quot;)]">
                               <ui:IfElseIfBlock.Then>
-                                <Sequence DisplayName="Samsung" sap:VirtualizedContainerService.HintSize="592,2366.4" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                                <Sequence DisplayName="Samsung" sap:VirtualizedContainerService.HintSize="592,2326.4" sap2010:WorkflowViewState.IdRef="Sequence_20">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser | Samsung" sap:VirtualizedContainerService.HintSize="529.6,2254.4" sap2010:WorkflowViewState.IdRef="BrowserScope_2" InformativeScreenshot="9807ef76685c7bd327f4468d1a74826d" Selector="&lt;html app='chrome.exe' title='*Samsung India' /&gt;">
+                                  <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser | Samsung" sap:VirtualizedContainerService.HintSize="529.6,2214.4" sap2010:WorkflowViewState.IdRef="BrowserScope_2" InformativeScreenshot="9807ef76685c7bd327f4468d1a74826d" Selector="&lt;html app='chrome.exe' title='*Samsung India' /&gt;">
                                     <ui:BrowserScope.Body>
                                       <ActivityAction x:TypeArguments="x:Object">
                                         <ActivityAction.Argument>
@@ -1321,7 +1319,7 @@ Select New KeyValuePair(Of String,Object)(row1(0).ToString.Trim,row1(1).ToString
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
                                           </ui:MultipleAssign>
-                                          <ui:WriteRange AddHeaders="False" DataTable="[Dt_InputBot4]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="433.6,116" sap2010:WorkflowViewState.IdRef="WriteRange_2" SheetName="[SheetName]" StartingCell="A2" WorkbookPath="[Config(&quot;ReportPath&quot;).ToString+&quot; Ovens &quot;+Date_Time+&quot;.xlsx&quot;]" />
+                                          <ui:WriteRange AddHeaders="False" DataTable="[Dt_InputBot4]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="433.6,116" sap2010:WorkflowViewState.IdRef="WriteRange_2" SheetName="[SheetName]" StartingCell="A2" WorkbookPath="[Config(&quot;ReportPath_main&quot;).ToString]" />
                                           <ui:CloseTab Browser="[bot4Browser]" DisplayName="Close Tab" sap:VirtualizedContainerService.HintSize="433.6,24.8" sap2010:WorkflowViewState.IdRef="CloseTab_2" />
                                         </Sequence>
                                       </ActivityAction>
@@ -1338,10 +1336,22 @@ Select New KeyValuePair(Of String,Object)(row1(0).ToString.Trim,row1(1).ToString
                             </ui:IfElseIfBlock>
                           </sc:BindingList>
                         </ui:IfElseIf.ConditionBlocks>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
                       </ui:IfElseIf>
                     </Sequence>
                   </ActivityAction>
                 </ui:OpenBrowser.Body>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
               </ui:OpenBrowser>
             </Sequence>
           </ActivityAction>
