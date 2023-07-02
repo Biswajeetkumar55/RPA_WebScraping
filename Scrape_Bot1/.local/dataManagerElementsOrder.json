@@ -138,6 +138,7 @@
       "Path": "Bot_4.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "newDtSamsungSpecs&Sequence_13",
         "RowIndex&Sequence_13",
         "Dt_SamsungSpecs&Sequence_21",
         "SamsungSpecsDict&Sequence_21",
@@ -168,6 +169,52 @@
         "Date_Time",
         "SheetName"
       ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Bot4_Ultra.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "Details_dict&Sequence_26",
+        "Dt_new&Sequence_26",
+        "Dt_AmazonSpecs&Sequence_20",
+        "RowIndex&Sequence_12",
+        "pageloded&Sequence_16",
+        "browser&Sequence_12",
+        "ProductName_amazon&Sequence_12",
+        "ModelNumberAmazon&Sequence_12",
+        "ModelNumber&Sequence_12",
+        "FirstMatch&Sequence_22",
+        "URL_Amazon&Sequence_20",
+        "OfferPriceAmazon&Sequence_12",
+        "MRP_Amazon&Sequence_12",
+        "Dt_UltraBot4&Sequence_12"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "Config",
+        "SheetName"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Frameworks/AmazonScraping.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "Warrenty&Sequence_1",
+        "MagetronWarrenty&Sequence_1",
+        "Brand_Amazon&Sequence_2",
+        "Capacity_Amazon&Sequence_2",
+        "Colour_Amazon&Sequence_2",
+        "ExtractDataTable&Sequence_2",
+        "Details_dict&Sequence_2",
+        "Dt_new&Sequence_2",
+        "Dt_Amazon&Sequence_2",
+        "AllText&Sequence_2",
+        "Warrentytext&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
     }
